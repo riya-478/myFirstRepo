@@ -1,0 +1,23 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<form [formGroup]="signup">
+  <div class="form-group">
+    <label for="username">Username</label>
+    <input
+      formcontrolName="Username"
+      id="username"
+      type="text"
+      class="form-control">
+      <div *ngIf="Username.touched && Username.invalid"></div>
+  </div>
+  <div class="form-group">
+      <label for="password">Password</label>
+      <input
+        formControlName="password"
+        id="password"
+        type="text"
+        class="form-control">
+    </div>
+    <div>
+       <button class="btn btn-primary" type="submit" (click)="onsubmit()">Sign up </button>
+    </div>
+<router-outlet></router-outlet>
